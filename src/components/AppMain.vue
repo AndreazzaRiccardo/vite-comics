@@ -5,9 +5,23 @@ export default {
 </script>
 
 <template>
-  <h2>Main</h2>
+  <main>
+    <div class="container">
+      <p>-->content goes here</p>
+    </div>
+  </main>
 </template>
 
 <style lang="scss">
+@use "../style/general.scss" as *;
 
+main {
+  // debug
+  height: 150px;
+  background-color: rgb(45, 44, 44);
+  p {
+    color: white;
+    font-size: 2rem;
+  }
+}
 </style>

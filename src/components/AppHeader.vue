@@ -56,18 +56,18 @@ export default {
 </script>
 
 <template>
-  <div class="container">
     <header>
-        <nav>
-            <img src="../assets/img/dc-logo.png" alt="">
-            <ul>
-                <li :class="{ active : activeIndex === index }" v-for="(item, index) in navItem" :key="item.name" @click="selectItemNav(index)">
-                    <a href="">{{ item.name }}</a>
-                </li>
-            </ul>
-        </nav>
+        <div class="container">
+            <nav>
+                <img src="../assets/img/dc-logo.png" alt="">
+                <ul>
+                    <li :class="{ active : activeIndex === index }" v-for="(item, index) in navItem" :key="item.name" @click="selectItemNav(index)">
+                        <a href="">{{ item.name }}</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
     </header>
-  </div>
 </template>
 
 <style lang="scss">
@@ -76,7 +76,7 @@ export default {
 
 nav {
     @include flex(row, space-between, center);
-    padding: 1.5rem 0;
+
     height: 150px;
     
     ul {
