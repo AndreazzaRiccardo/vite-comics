@@ -133,6 +133,12 @@ footer {
       background-color: $bg-dark-color;
       color: white;
       font-weight: bolder;
+
+      &:hover {
+        background-color: lighten($bg-dark-color, 20%);
+        cursor: pointer;
+        border: 3px groove;
+      }
     }
   }
 
