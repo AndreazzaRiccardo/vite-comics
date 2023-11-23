@@ -88,7 +88,6 @@ nav {
     height: 150px;
     
     ul {
-        list-style: none;
         @include flex(row, space-between, center);
         gap: 1rem;
         height: 100%;
