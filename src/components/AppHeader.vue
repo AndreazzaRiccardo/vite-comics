@@ -49,7 +49,7 @@ export default {
     },
     methods: {
         selectItemNav(index) {
-            this.activeIndex = index
+            this.activeIndex = index;
         }
     }
 }
