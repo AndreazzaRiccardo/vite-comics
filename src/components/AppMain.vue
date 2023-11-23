@@ -12,7 +12,7 @@ export default {
   </main>
 </template>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @use "../style/general.scss" as *;
 
 main {

@@ -71,12 +71,20 @@ export default {
 </template>
 
 <style lang="scss">
-@use "../style/general.scss" as *;
-@use "../style/partials/mixins.scss" as *;
+@use "../style/general" as *;
+@use "../style/partials/mixins" as *;
+@use "../style/partials/variables" as *;
 
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%
+}
 nav {
     @include flex(row, space-between, center);
-
+    width: 100%;
     height: 150px;
     
     ul {
@@ -92,7 +100,7 @@ nav {
         }
 
         .active {
-            border-bottom: 5px solid var(--bg-blue);
+            border-bottom: 5px solid $bg-color;
         }
 
         a {
@@ -101,7 +109,5 @@ nav {
         }
     }
 }
-
-
 
 </style>
