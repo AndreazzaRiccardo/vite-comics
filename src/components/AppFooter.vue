@@ -52,6 +52,7 @@ export default {
 }
 </script>
 
+
 <template>
   <footer>
     <section class="top-footer-section container">
@@ -81,6 +82,7 @@ export default {
     </section>
   </footer>
 </template>
+
 
 <style lang="scss" scoped>
 @use "../style/general" as *;
@@ -119,7 +121,7 @@ footer {
 
 .bottom-footer-section {
   height: 100px;
-  background-color: #303030;
+  background-color: $bg-dark-color;
 
   .container {
     @include flex(row, space-between, center);
@@ -128,7 +130,7 @@ footer {
     button {
       border: 2px solid $bg-color;
       padding: .8rem 1rem;
-      background-color: #303030;
+      background-color: $bg-dark-color;
       color: white;
       font-weight: bolder;
     }

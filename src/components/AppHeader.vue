@@ -55,6 +55,7 @@ export default {
 }
 </script>
 
+
 <template>
     <header>
         <div class="container">
@@ -70,6 +71,7 @@ export default {
     </header>
 </template>
 
+
 <style lang="scss">
 @use "../style/general" as *;
 @use "../style/partials/mixins" as *;
@@ -82,6 +84,7 @@ header {
     z-index: 1;
     width: 100%
 }
+
 nav {
     @include flex(row, space-between, center);
     width: 100%;
@@ -89,7 +92,7 @@ nav {
     
     ul {
         @include flex(row, space-between, center);
-        gap: 1rem;
+        gap: 1.5rem;
         height: 100%;
 
         li {
@@ -108,5 +111,4 @@ nav {
         }
     }
 }
-
 </style>

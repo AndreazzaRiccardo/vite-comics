@@ -34,17 +34,18 @@ export default {
 }
 </script>
 
+
 <template>
   <section>
     <div class="container">
       <div class="img-cont" v-for="img in adImgs">
-        <img :src=getImageUrl(img.url) alt="" >
+        <img :src=getImageUrl(img.url) :alt="`Icon of ${img.title}`" >
         <h5>{{ img.title }}</h5>
       </div>
     </div>
   </section>
-  
 </template>
+
 
 <style lang="scss" scoped>
 @use "../style/general" as *;
@@ -70,5 +71,4 @@ section {
     width: 25%;
   }
 }
-
 </style>
