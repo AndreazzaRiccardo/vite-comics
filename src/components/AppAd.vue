@@ -69,6 +69,7 @@ section {
 
   img {
     width: 25%;
+    aspect-ratio: 1;
   }
 }
 </style>

@@ -36,13 +36,17 @@ header {
     left: 0;
     z-index: 1;
     width: 100%;
-    background-color: white
+    background-color: white;
 }
 
 nav {
     @include flex(row, space-between, center);
     width: 100%;
-    height: 150px;
+    height: 100px;
+    
+    img {
+        height: 80%
+    }
     
     ul {
         @include flex(row, space-between, center);
