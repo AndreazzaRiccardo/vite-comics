@@ -2,54 +2,7 @@
 export default {
     data() {
         return {
-            activeIndex: "",
-            navItem: [
-            {
-                name: "CHARATERS",
-                active: false
-            },
-            {
-                name: "COMICS",
-                active: false
-            },
-            {
-                name: "MOVIES",
-                active: false
-            },
-            {
-                name: "TV",
-                active: false
-            },
-            {
-                name: "GAMES",
-                active: false
-            },
-            {
-                name: "COLLECTIBLES",
-                active: false
-            },
-            {
-                name: "VIDEOS",
-                active: false
-            },
-            {
-                name: "FANS",
-                active: false
-            },
-            {
-                name: "NEWS",
-                active: false
-            },
-            {
-                name: "SHOP",
-                active: false
-            }
-            ],
-        }
-    },
-    methods: {
-        selectItemNav(index) {
-            this.activeIndex = index;
+            navItem: ["CHARATERS","COMICS","MOVIES","TV","GAMES","COLLECTIBLES","VIDEOS","FANS","NEWS","SHOP",]
         }
     }
 }
@@ -60,10 +13,10 @@ export default {
     <header>
         <div class="container">
             <nav>
-                <img src="../assets/img/dc-logo.png" alt="">
+                <img src="../assets/img/dc-logo.png" alt="Logo DC comics">
                 <ul>
-                    <li :class="{ active : activeIndex === index }" v-for="(item, index) in navItem" :key="item.name" @click="selectItemNav(index)">
-                        <a href="">{{ item.name }}</a>
+                    <li v-for="(item) in navItem" :key="item">
+                        <a href="">{{ item }}</a>
                     </li>
                 </ul>
             </nav>
@@ -73,7 +26,7 @@ export default {
 
 
 <style lang="scss">
-@use "../style/general" as *;
+@use "../style/general";
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
@@ -100,11 +53,13 @@ nav {
             height: 100%;
             display: flex;
             align-items: center;
+
+            &:hover {
+                border-bottom: 5px solid $bg-color;
+            }
         }
 
-        .active {
-            border-bottom: 5px solid $bg-color;
-        }
+        
 
         a {
             color: black;

@@ -48,7 +48,7 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../style/general" as *;
+@use "../style/general";
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 

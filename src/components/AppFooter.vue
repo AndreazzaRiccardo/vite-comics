@@ -8,10 +8,6 @@ export default {
           list: ["Charaters", "Comics", "Movies", "TV", "Games", "Videos", "News"]
         },
         {
-          title: "SHOP",
-          list: ["Shop DC", "Shop DC Collectibles"]
-        },
-        {
           title: "DC",
           list: ["Terms Of Use", "Privacy Policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscriptions", "Talent Workshop", "CPSC Certificates", "Rating", "Shop Help", "Contact Us"]
         },
@@ -19,6 +15,10 @@ export default {
           title: "SITES",
           list: ["DC", "MAD Magazine", "DC Kids", "DC Universe", "DC Power Visa"]
         },
+        {
+          title: "SHOP",
+          list: ["Shop DC", "Shop DC Collectibles"]
+        }
       ],
       socialList: [
         {
@@ -57,7 +57,7 @@ export default {
   <footer>
     <section class="top-footer-section container">
       <div class="footer-list">
-        <div v-for="objList in footerList">
+        <div v-for="objList in footerList" class="link-list">
           <h4>{{ objList.title }}</h4>
           <ul>
             <li v-for="item in objList.list"><a href="">{{ item }}</a></li>
@@ -85,17 +85,17 @@ export default {
 
 
 <style lang="scss" scoped>
-@use "../style/general" as *;
+@use "../style/general";
 @use "../style/partials/variables" as *;
 @use "../style/partials/mixins" as *;
 
 footer {
-  height: 400px;
   width: 100%;
   background-image: url(../assets/img/footer-bg.jpg);
 }
 
 .top-footer-section {
+  min-height: 400px;
   color: white;
   @include flex(row, space-between, null);
 
@@ -110,11 +110,24 @@ footer {
   .footer-list {
     display: flex;
     padding: 2rem 0;
-    gap: 1rem;
+    flex-wrap: wrap;
+    width: calc(1200px / 3);
+    justify-content: space-between;
 
     a {
       color: gray;
       font-size: .8rem;
+    }
+
+    .link-list{
+      h4 {
+        margin-bottom: 1rem;
+      }
+      ul {
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+      }
     }
   }
 }
