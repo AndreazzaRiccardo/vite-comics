@@ -116,7 +116,7 @@ main {
 
   .comics {
     position: relative;
-    background-color: $bg-dark-color;
+    background-color: $bg-main-color;
     text-align: center;
     padding: 2rem;
 

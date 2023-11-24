@@ -104,7 +104,6 @@ footer {
     background-repeat: no-repeat;
     background-image: url(../assets/img/dc-logo-bg.png);
     width: 50%;
-    height: 400px;
   }
 
   .footer-list {
